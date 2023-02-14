@@ -8,7 +8,7 @@ module.exports = {
 		processor: "json-as-js/.json",
 		rules: {
 			"json-as-js/no-empty-strings": "error",
-			"sort-keys": "off", // doesn't work!
+			"sort-keys": "off",
 		},
 	}],
 	root: true,
