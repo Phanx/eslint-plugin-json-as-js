@@ -2,17 +2,17 @@ Example config file:
 
 ```js
 module.exports = {
-	ignorePatterns: ["./*.json"],
-	overrides: [
-		{
-			files: ["*.json"],
-			plugins: ["json-as-js"],
-			processor: "json-as-js/.json",
-		}
-	],
+	overrides: [{
+		files: ["**/locales/en-US/*.json"],
+		plugins: ["json-as-js"],
+		processor: "json-as-js/.json",
+		rules: {
+			"json-as-js/no-empty-strings": "error",
+			"sort-keys": "off", // doesn't work!
+		},
+	}],
 	root: true,
 	rules: {
-		"json-as-js/no-empty-strings": "error",
 		"sort-keys": "error",
 	},
 }
